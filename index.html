@@ -27,7 +27,7 @@
 
             <p class="lead">Quickly create and manage custom HTML signatures for use in Apple Mail. Inline CSS is easily visualized in a
                 live-preview that guides design along the way.</p>
-            <p><button id="notify" class="btn btn-lg btn-success" target="_blank" role="button">Get Notified</button></p>
+            <p><button onlick="loadSubscribe" class="btn btn-lg btn-success" target="_blank" role="button">Get Notified</button></p>
 
         </div>
 
@@ -61,9 +61,7 @@
 
     <script type="text/javascript" src="https://s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
     <script type="text/javascript">
-        document.getElementById("notify").addEventListener("click", function() {
-            require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us15.list-manage.com","uuid":"915f0a3e16d96f732ff7a0a23","lid":"1f55e640c2"}) })
-        });
+        require(["mojo/signup-forms/Loader"], function loadSubscribe(L) { L.start({"baseUrl":"mc.us15.list-manage.com","uuid":"915f0a3e16d96f732ff7a0a23","lid":"1f55e640c2"}) })
     </script>
 </body>
 
